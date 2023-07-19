@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Tabela.css'; // Importando a folha de estilo CSS
 
 function Tabela({ vetor }) {
   const [searchNome, setSearchNome] = useState('');
@@ -64,24 +65,26 @@ function Tabela({ vetor }) {
 
   return (
     <div>
-      <tr>
-        <th>
-          Data de Inicio : <input type="date" value={searchStartDate} onChange={handleSearchStartDate} placeholder="Data de início" />
-        </th>
-        <th>
-          Data de Fim: <input type="date" value={searchEndDate} onChange={handleSearchEndDate} placeholder="Data de término" />
-        </th>
-        <th>
-          Nome do Operador : <input type="text" value={searchNome} onChange={handleSearchNome} placeholder="Buscar por nome" />
-        </th>
-        <th>
-         Pesquisar : 
-         <button onClick={handleSearchClick} disabled={isSearching}>
-          {isSearching ? 'Pesquisando...' : 'Pesquisar'}
-      </button>
-         </th>   
+      <div className="search-container">
+        <div className="search-item">
+          <label>Data de Início:</label>
+          <input type="date" value={searchStartDate} onChange={handleSearchStartDate} placeholder="Data de início" />
+        </div>
+        <div className="search-item">
+          <label>Data de Fim:</label>
+          <input type="date" value={searchEndDate} onChange={handleSearchEndDate} placeholder="Data de término" />
+        </div>
+        <div className="search-item">
+          <label>Nome do Operador:</label>
+          <input type="text" value={searchNome} onChange={handleSearchNome} placeholder="Buscar por nome" />
+        </div>
+        <div className="search-item">
+          <button onClick={handleSearchClick} disabled={isSearching}>
+            {isSearching ? 'Pesquisando...' : 'Pesquisar'}
+          </button>
+        </div>
+      </div>
 
-      </tr>
       <table className="table">
         <thead>
           <tr>
