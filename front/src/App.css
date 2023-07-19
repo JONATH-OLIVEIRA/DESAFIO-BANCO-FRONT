@@ -1,0 +1,23 @@
+form {
+  width: 500px;
+  margin: 30px auto;
+  text-align: center;
+  float: right;
+  background-image: #808080;
+  position: relative;
+}
+
+form-input{
+  margin-bottom: 5px;
+  
+}
+
+form-input[type='button']{
+  margin-right: 10px;
+  
+}
+.form-date{
+float: right;
+}
+
+
