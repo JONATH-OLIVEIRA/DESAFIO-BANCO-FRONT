@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import './App.css';
-import Formulario from './Formulario';
 import Tabela from './Tabela';
 
 function App() {
@@ -20,7 +19,6 @@ useEffect(()=>{
   return (
         
     <div>
-      <Formulario/>
       <Tabela vetor={transferencias} />
     </div>
   );
