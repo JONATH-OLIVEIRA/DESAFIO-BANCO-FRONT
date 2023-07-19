@@ -113,5 +113,5 @@ function Tabela({ vetor }) {
   );
 }
 
-export default Tabela;
+export default Tabela; 
 
